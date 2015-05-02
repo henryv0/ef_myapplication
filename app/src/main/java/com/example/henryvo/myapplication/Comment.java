@@ -21,6 +21,8 @@ public class Comment {
         this.commentText = commentText;
     }
 
+    //sadads
+
     public Comment() {
     }
 
@@ -63,4 +65,7 @@ public class Comment {
     public void setUserID(int userID) {
         this.userID = userID;
     }
+
+
+}
 
