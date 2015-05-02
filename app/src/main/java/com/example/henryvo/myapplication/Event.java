@@ -14,7 +14,7 @@ public class Event {
     private String eventLink;
     private Date eventStartTime;
     private Date eventEndTime;
-//
+//asdasd
 
 
     private int societyID;
