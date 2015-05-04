@@ -8,7 +8,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="registerUser">Success!</string>
-
+    <string name="action_register">Register</string>
 
 
 </resources>

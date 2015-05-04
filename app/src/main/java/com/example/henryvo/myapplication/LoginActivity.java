@@ -306,6 +306,10 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                     Intent myIntent = new Intent(LoginActivity.this,MainActivity.class);
                     LoginActivity.this.startActivity(myIntent);
                 } else {
+                    mPasswordView.setError(getString(R.string.error_incorrect_password));
+                    mPasswordView.requestFocus();
+
+                    /*
                     DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
@@ -332,11 +336,14 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                                     break;
                             }
                         }
+
                     };
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(this.mContext);
                     builder.setMessage(R.string.confirm_registry).setPositiveButton(R.string.yes, dialogClickListener)
                             .setNegativeButton(R.string.no, dialogClickListener).show();
+
+                            */
                 }
 
                 /* OLD INTENT
