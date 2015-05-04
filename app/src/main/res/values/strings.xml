@@ -9,6 +9,7 @@
     <string name="no">No</string>
     <string name="registerUser">Success!</string>
     <string name="action_register">Register</string>
+    <string name="title_activity_register">RegisterActivity</string>
 
 
 </resources>

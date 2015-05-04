@@ -15,7 +15,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="@android:dimen/notification_large_icon_height"
+        android:layout_height="150dp"
         android:text="Floc Filler Logo"
         android:id="@+id/textView"
         android:textSize="30sp"
@@ -39,19 +39,28 @@
                 android:imeOptions="actionUnspecified" android:inputType="textPassword"
                 android:maxLines="1" android:singleLine="true" />
 
-            <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
-                android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:layout_marginTop="16dp" android:text="@string/action_sign_in_short"
-                android:textStyle="bold" />
-
-            <Button
-                style="?android:textAppearanceSmall"
-                android:id="@+id/register_button"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@string/action_register"
-                android:textStyle="bold" />
+                android:layout_gravity="center_horizontal">
+
+                <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" android:text="@string/action_sign_in_short"
+                    android:textStyle="bold"
+                    android:layout_weight="1" />
+
+                <Button
+                    style="?android:textAppearanceSmall"
+                    android:id="@+id/register_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/action_register"
+                    android:textStyle="bold"
+                    android:layout_weight="1" />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

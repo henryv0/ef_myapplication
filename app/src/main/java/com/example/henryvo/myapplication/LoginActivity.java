@@ -47,6 +47,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     private User myUser;
 
+
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -84,6 +85,14 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             @Override
             public void onClick(View view) {
                 attemptLogin();
+            }
+        });
+
+        Button mRegisterButton = (Button) findViewById(R.id.register_button);
+        mRegisterButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                registerUser();
             }
         });
 
@@ -147,6 +156,11 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             mAuthTask = new UserLoginTask(email, password, this);
             mAuthTask.execute((Void) null);
         }
+    }
+
+    public void registerUser() {
+        Intent myIntent = new Intent(this,RegisterActivity.class);
+        LoginActivity.this.startActivity(myIntent);
     }
 
     private boolean isEmailValid(String email) {
