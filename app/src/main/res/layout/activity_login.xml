@@ -13,13 +13,20 @@
         android:layout_width="wrap_content" android:layout_height="wrap_content"
         android:layout_marginBottom="8dp" android:visibility="gone" />
 
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:text="Floc Filler Logo"
-        android:id="@+id/textView"
-        android:textSize="30sp"
-        android:gravity="center" />
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@android:dimen/thumbnail_height"
+            android:text="FLOC FILLER"
+            android:id="@+id/textView"
+            android:gravity="center"
+            android:textSize="30sp" />
+
+    </LinearLayout>
 
     <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -39,28 +46,20 @@
                 android:imeOptions="actionUnspecified" android:inputType="textPassword"
                 android:maxLines="1" android:singleLine="true" />
 
-            <LinearLayout
-                android:orientation="horizontal"
+            <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:text="@string/action_sign_in_short"
+                android:textStyle="bold" />
+
+            <Button
+                style="?android:textAppearanceSmall"
+                android:id="@+id/register_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal">
-
-                <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
-                    android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp" android:text="@string/action_sign_in_short"
-                    android:textStyle="bold"
-                    android:layout_weight="1" />
-
-                <Button
-                    style="?android:textAppearanceSmall"
-                    android:id="@+id/register_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="@string/action_register"
-                    android:textStyle="bold"
-                    android:layout_weight="1" />
-            </LinearLayout>
+                android:layout_marginTop="4dp"
+                android:text="@string/common_registerUser"
+                android:textStyle="bold"
+                android:onClick=""/>
 
         </LinearLayout>
     </ScrollView>
