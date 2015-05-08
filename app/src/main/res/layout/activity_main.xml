@@ -5,67 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
-        android:id="@+id/RelativeLayout">
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-        <TabHost
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/tabHost">
+        <include
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar" />
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:orientation="vertical">
-
-                <HorizontalScrollView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/horizontalScrollView"
-                    android:fillViewport="true">
-
-                    <TabWidget
-                        android:id="@android:id/tabs"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"></TabWidget>
-                </HorizontalScrollView>
-
-                <FrameLayout
-                    android:id="@android:id/tabcontent"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:id="@+id/tab1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"></LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/tab2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"></LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/tab3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"></LinearLayout>
-
-                    <LinearLayout
-                        android:id="@+id/tab4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical" />
-
-                </FrameLayout>
-            </LinearLayout>
-        </TabHost>
-    </RelativeLayout>
+    </LinearLayout>
 
     <ListView
         android:id="@+id/navList"
@@ -73,5 +23,19 @@
         android:layout_height="match_parent"
         android:layout_gravity="left|start"
         android:background="#ffeeeeee"/>
+
+    <!--
+
+    <fragment
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_navigation_home"
+        android:name="com.example.henryvo.myapplication.HomeFragment"
+        android:layout_gravity="start"
+        app:layout="@layout/fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+
+    -->
 
 </android.support.v4.widget.DrawerLayout>
